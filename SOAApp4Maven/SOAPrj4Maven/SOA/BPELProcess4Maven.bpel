@@ -69,7 +69,7 @@
 
     <!-- Receive input from requestor. (Note: This maps to operation defined in BPELProcess4Maven.wsdl) -->
     <receive name="receiveInput" partnerLink="bpelprocess4maven_client" portType="client:BPELProcess4Maven" operation="process" variable="inputVariable" createInstance="yes"/>
-    <assign name="Assign1">
+    <assign name="Assign">
       <copy>
         <from>concat('Hello  ',$inputVariable.payload/client:input)</from>
         <to>$outputVariable.payload/client:result</to>
